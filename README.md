@@ -1,5 +1,5 @@
 # gdocs-eform
-a repository to demonstrate a form system using google docs api.
+a repository to demonstrate a form system using google sheets api.
 
 install dependencies:
 > `$ npm install`
