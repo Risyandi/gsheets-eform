@@ -1,9 +1,24 @@
-var express = require('express');
-var router = express.Router();
+// import library
+const express = require('express');
+const cors = require('cors');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// import controller
+// const index = require("../controllers/Index");
 
-module.exports = router;
+// export module
+module.exports = function routes(app) {
+  // allow cors origin access
+  app.use(cors());
+
+  // define route
+  app.use('/api/v1/', router);
+
+  app.get('/api/v1/', (req, res, next) => {
+    res.json({
+      "title": "api gsheets eform",
+      "description": "endpoint api for google sheets eform",
+      "version": "0.0.1"
+    });
+  });
+};
