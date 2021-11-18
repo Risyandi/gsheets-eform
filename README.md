@@ -5,5 +5,5 @@ install dependencies:
 > `$ npm install`
 
 run the app:
-> `$ SET DEBUG=gsheets-eform:* & npm start` (windows command prompt)
+> `$ SET DEBUG=gsheets-eform:* & npm start` (windows command prompt)  
 > `$ $env:DEBUG='gsheets-eform:*'; npm start` (windows powershell)
