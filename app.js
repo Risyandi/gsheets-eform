@@ -36,10 +36,6 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // set default request
 app.get('/', (req, res) => {
-  // res.json({
-  //   "title": "welcome google sheets eform",
-
-  // });
   res.render('index', {
     title: 'Google Sheets Eform API\'s',
     description: "Endpoint api for gsheets eform",
