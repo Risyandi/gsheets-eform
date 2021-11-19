@@ -4,14 +4,14 @@ const cors = require('cors');
 const router = express.Router();
 
 // import controller
-// const index = require("../controllers/Index");
+const spreadSheets = require("../controller/spreadSheets");
 
 // export module
 module.exports = function routes(app) {
   // allow cors origin access
   app.use(cors());
 
-  // define route
+  // initial define route
   app.use('/api/v1/', router);
 
   app.get('/api/v1/', (req, res, next) => {
@@ -21,4 +21,8 @@ module.exports = function routes(app) {
       "version": "0.0.1"
     });
   });
+
+  // all route
+  router.get('/spreadsheet', spreadSheets.find);
+
 };
