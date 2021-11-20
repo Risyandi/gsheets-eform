@@ -25,7 +25,7 @@ exports.create = async (req, res) => {
     try {
         const auth = getAuth();
         const googleSheets = await getGoogleSheet(auth);
-        await googleSheets.spreadsheets.values.append({
+        const getSheetData = await googleSheets.spreadsheets.values.append({
             auth,
             spreadsheetId,
             range: 'Sheet1!A1:D',
@@ -36,7 +36,10 @@ exports.create = async (req, res) => {
                 ],
             },
         });
-        res.send("submit successfully");
+        res.send({
+            message: 'create successfully',
+            data: getSheetData.data
+        });
     } catch (error) {
         res.send(error)
     }
@@ -46,12 +49,15 @@ exports.delete = async (req, res) => {
     try {
         const auth = getAuth();
         const googleSheets = await getGoogleSheet(auth);
-        await googleSheets.spreadsheets.values.clear({
+        const getSheetData = await googleSheets.spreadsheets.values.clear({
             auth,
             spreadsheetId,
             range: 'Sheet1!A5:D5',
         });
-        res.send("delete successfully");
+        res.send({
+            message: "delete successfully",
+            data: getSheetData.data
+        });
     } catch (error) {
         res.send(error)
     }
@@ -61,7 +67,7 @@ exports.update = async (req, res) => {
     try {
         const auth = getAuth();
         const googleSheets = await getGoogleSheet(auth);
-        await googleSheets.spreadsheets.values.update({
+        const getSheetData = await googleSheets.spreadsheets.values.update({
             auth,
             spreadsheetId,
             range: 'Sheet1!A2:D2',
@@ -72,7 +78,10 @@ exports.update = async (req, res) => {
                 ],
             },
         });
-        res.send("updated successfully");
+        res.send({
+            message: "updated successfully",
+            data: getSheetData.data
+        });
     } catch (error) {
         res.send(error)
     }
