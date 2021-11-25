@@ -1,15 +1,16 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- return component -->
+    <HelloWorld txt="Welcome" txt2="gsheets eform"/>
   </div>
 </template>
 
 <script>
+// import and export
 import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
+  name: 'Appi',
   components: {
     HelloWorld
   }
