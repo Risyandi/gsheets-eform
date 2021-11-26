@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ txt +' '+ txt2 }}</h1>
+    <h1>{{ txt1 +' '+ txt2 }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -13,7 +13,7 @@
 export default {
   name: 'HelloWorld',
   props: {
-    txt: String,
+    txt1: String,
     txt2: String
   }
 }
