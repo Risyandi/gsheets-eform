@@ -1,23 +1,24 @@
 {
   "name": "frontend-gsheets",
   "version": "1.0.0",
-  "description": "frontend for gsheets application",
-  "main": "index.js",
-  "author": "risyandi",
-  "license": "MIT",
   "private": true,
+  "description": "frontend for gsheets application",
+  "author": "risyandi",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "main": "index.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
@@ -42,5 +43,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "license": "MIT"
 }
