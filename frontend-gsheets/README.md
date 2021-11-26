@@ -1,4 +1,4 @@
-# gsheets
+# frontend gsheets
 
 ## Project setup
 ```

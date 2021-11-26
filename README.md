@@ -1,9 +1,12 @@
 # gdocs-eform
 a repository to demonstrate a form system using google sheets api.
 
-install dependencies:
+### Install dependencies:
 > `$ npm install`
 
-run the app:
-> `$ SET DEBUG=gsheets-eform:* & npm start` (windows command prompt)  
-> `$ $env:DEBUG='gsheets-eform:*'; npm start` (windows powershell)
+### Run the app frontend:
+> `$ npm run serve`  
+
+### Run the app backend:
+> `$ SET DEBUG=gsheets-eform:* & npm run start` (windows command prompt)  
+> `$ $env:DEBUG='gsheets-eform:*'; npm run start` (windows powershell)
