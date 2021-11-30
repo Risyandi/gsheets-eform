@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Liputan6",
+        "link": "https://www.liputan6.com/",
+        "description": "lorem ipsum dolor sit amet"
+    },
+    {
+        "name": "Vidio",
+        "link": "https://www.vidio.com/",
+        "description": "lorem ipsum dolor sit amet"
+    },
+    {
+        "name": "Bintang",
+        "link": "https://www.bintang.com/",
+        "description": "lorem ipsum dolor sit amet"
+    },
+    {
+        "name": "Bukalapak",
+        "link": "https://www.bukalapak.com/",
+        "description": "lorem ipsum dolor sit amet"
+    },
+    {
+        "name": "KMK Online",
+        "link": "https://www.kmkonline.co.id/",
+        "description": "lorem ipsum dolor sit amet"
+    },
+    {
+        "name": "Home Tester Club",
+        "link": "https://www.hometesterclub.com/",
+        "description": "lorem ipsum dolor sit amet"
+    }
+]
