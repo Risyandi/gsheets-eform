@@ -25,6 +25,11 @@ const routes = [
     path: '/web',
     name: 'Media Website',
     component: () => import('../views/Website.vue')
+  },
+  {
+    path: '*',
+    name: 'Not Found',
+    component: () => import('../views/NotFound.vue')
   }
 ]
 
