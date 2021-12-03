@@ -2,31 +2,37 @@
     {
         "name": "Liputan6",
         "link": "https://www.liputan6.com/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": true
     },
     {
         "name": "Vidio",
         "link": "https://www.vidio.com/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": false
     },
     {
         "name": "Bintang",
         "link": "https://www.bintang.com/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": true
     },
     {
         "name": "Bukalapak",
         "link": "https://www.bukalapak.com/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": false
     },
     {
         "name": "KMK Online",
         "link": "https://www.kmkonline.co.id/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": true
     },
     {
         "name": "Home Tester Club",
         "link": "https://www.hometesterclub.com/",
-        "description": "lorem ipsum dolor sit amet"
+        "description": "lorem ipsum dolor sit amet",
+        "bg_dark": false
     }
 ]

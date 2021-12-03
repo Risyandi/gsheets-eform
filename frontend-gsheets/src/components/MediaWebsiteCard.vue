@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper" id="media-website">
-        <div v-for="dataMedia in mediaWebsite" :key="dataMedia.name" class="card">
+        <div v-for="dataMedia in mediaWebsite" :key="dataMedia.name" v-bind:class="dataMedia.bg_dark !== true ? 'card' : 'card bg-dark'">
             <p>{{dataMedia.name}}</p>
             <p><a :href="dataMedia.link" target="_blank"> {{dataMedia.link}}</a></p>
             <p>{{dataMedia.description}}</p>
@@ -41,5 +41,9 @@ export default {
     .card :last-child {
         font-style: italic;
         font-size: .8rem;
+    }
+    .bg-dark {
+        background-color: #343a40;
+        color: aliceblue;
     }
 </style>
