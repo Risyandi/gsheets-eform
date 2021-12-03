@@ -5,6 +5,7 @@
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      <button v-on:click="checkButton()"> Hello Popup</button>
     </p>
   </div>
 </template>
@@ -15,6 +16,11 @@ export default {
   props: {
     txt1: String,
     txt2: String
+  },
+  methods : {
+    checkButton() {
+      return alert("hello");
+    }
   }
 }
 </script>
