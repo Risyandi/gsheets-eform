@@ -13,14 +13,24 @@
 <script>
 import gsheetDataServices from '../services/gsheetDataServices';
 
-let getGsheets = gsheetDataServices.getAllData();
-
 export default {
   name: 'About',
   data() {
       return {
-        gsheets : getGsheets[0].data.values
+        gsheets : null 
       }
+  },
+  mounted() {
+    let getGsheets = gsheetDataServices.getAllData();
+    getGsheets.then(response => {
+      // check response status
+      if (response.status !== 200) {
+        console.log('Error: ' + response.status);
+        this.gsheets = null;
+      } else {
+        this.gsheets = response.data.values;
+      }
+    })
   }
 }
 </script>
