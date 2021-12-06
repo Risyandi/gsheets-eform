@@ -17,7 +17,7 @@ export default {
     txt1: String,
     txt2: String
   },
-  methods : {
+  methods: {
     checkButton() {
       return alert("hello");
     }
