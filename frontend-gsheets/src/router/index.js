@@ -27,6 +27,11 @@ const routes = [
     component: () => import('../views/Website.vue')
   },
   {
+    path: '/form',
+    name: 'Form Google Sheets',
+    component: () => import('../views/FormGsheets.vue')
+  },
+  {
     path: '*',
     name: 'Not Found',
     component: () => import('../views/NotFound.vue')
