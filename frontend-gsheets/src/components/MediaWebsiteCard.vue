@@ -13,8 +13,11 @@ import Data from '../static/dataMediawebsite.json'
 export default {
     data() {
         return {
-            mediaWebsite: Data
+            mediaWebsite: null
         }
+    },
+    mounted() {
+        this.mediaWebsite = Data
     }
 }
 </script>
