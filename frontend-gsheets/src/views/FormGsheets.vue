@@ -1,7 +1,14 @@
 <template>
   <div class="form-wrap">
-    <h2>Contact Us</h2>
+    <h2>Gsheets Register Data</h2>
     <form v-on:submit.prevent="submitForm">
+      <div class="form-group">
+        <label for="nomor">Nomor</label>
+        <input type="text" class="form-control" id="nomor" v-model="form.nomor" placeholder="Enter your nomor">
+        <span>
+          {{form.nomor.length > 0 ? '' : 'Nomor is required'}}
+        </span>
+      </div>
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" v-model="form.name" placeholder="Enter your name">
@@ -10,17 +17,17 @@
         </span>
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" v-model="form.email" placeholder="Enter your email">
+        <label for="alamat">Alamat</label>
+        <input type="text" class="form-control" id="alamat" v-model="form.alamat" placeholder="Enter your alamat">
         <span>
-          {{form.email.length > 0 ? '' : 'Email is required'}}
+          {{form.alamat.length > 0 ? '' : 'Alamat is required'}}
         </span>
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" v-model="form.message" rows="3" placeholder="Enter your message"></textarea>
+        <label for="handphone">Nomor Handphone</label>
+        <input type="number" class="form-control" id="handphone" v-model="form.handphone" placeholder="Enter your nomor handphone">
         <span>
-          {{form.message.length > 0 ? '' : 'Message is required'}}
+          {{form.handphone.length > 0 ? '' : 'Nomor handphone is required'}}
         </span>
       </div>
       <div class="form-button">
@@ -31,22 +38,39 @@
 </template>
 
 <script>
+  import gsheetDataServices from '../services/gsheetDataServices';
   export default {
     name: 'FormGsheets',
     data(){
       return {
         form: {
+          nomor: '',
           name: '',
-          email: '',
-          message: ''
+          alamat: '',
+          handphone: ''
         }
       }
     },
     methods: {
       submitForm() {
-        console.log('submit form');
-        console.log(this.form.name, 'value form');
-        alert(this.form.name + '-' + this.form.email + '-' + this.form.message);
+        const formdata = {
+            "data": [
+                this.form.nomor,
+                this.form.name,
+                this.form.alamat,
+                this.form.handphone
+            ]
+        }
+        const getGsheets = gsheetDataServices.addData(formdata);
+        getGsheets.then(response => {
+          // check response status
+          if (response.status !== 200) {
+            console.log('Error: ' + response.status);
+            this.gsheets = null;
+          } else {
+            this.gsheets = response.data.values;
+          }
+        })
       }
     }
   }
