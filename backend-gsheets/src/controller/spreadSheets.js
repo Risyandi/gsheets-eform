@@ -23,6 +23,7 @@ exports.find = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
+        const inputData = req.body.data;
         const auth = getAuth();
         const googleSheets = await getGoogleSheet(auth);
         const getSheetData = await googleSheets.spreadsheets.values.append({
@@ -32,7 +33,8 @@ exports.create = async (req, res) => {
             valueInputOption: 'USER_ENTERED',
             resource: {
                 values: [
-                    ['hello2', 'hello2', 'hello2', 'hello2']
+                    inputData
+                    // example format: ['hello2', 'hello2', 'hello2', 'hello2']
                 ],
             },
         });
