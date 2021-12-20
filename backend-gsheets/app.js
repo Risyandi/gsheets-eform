@@ -7,9 +7,6 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const app = express();
 
-// require routes
-require('./src/routes')(app);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'pug');
@@ -30,6 +27,9 @@ app.use(express.urlencoded({
 
 // parse cookie
 app.use(cookieParser());
+
+// require routes
+require('./src/routes')(app);
 
 // set express static
 app.use('/public', express.static(path.join(__dirname, 'public')));
