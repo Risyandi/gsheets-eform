@@ -10,8 +10,8 @@ class gsheetDataServices {
     deleteData() {
         return xhr.post('/spreadsheet/delete');
     }
-    addData() {
-        return xhr.post('/spreadsheet');
+    addData(formdata) {
+        return xhr.post('/spreadsheet', formdata);
     }
 }
 
