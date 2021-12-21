@@ -3585,7 +3585,7 @@ p {
 
 .title {
   font-weight: 700;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 
 .title.title-up {
