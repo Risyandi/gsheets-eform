@@ -4,7 +4,8 @@
       <router-link to="/" exact>Home</router-link> |
       <router-link to="/about" exact>About</router-link> |  
       <router-link to="/web" exact>Website</router-link> | 
-      <router-link to="/form" exact>Form</router-link>
+      <router-link to="/form" exact>Form</router-link> |
+      <router-link to="/profile" exact>Profile</router-link>
     </div>
     <router-view/>
   </div>
