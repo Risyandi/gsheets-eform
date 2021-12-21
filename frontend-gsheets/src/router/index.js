@@ -39,6 +39,11 @@ const routes = [
     component: () => import('../views/FormGsheets.vue')
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../views/Profile.vue')
+  },
+  {
     path: '*',
     name: 'Not Found',
     component: () => import('../views/NotFound.vue')
