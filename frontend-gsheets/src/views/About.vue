@@ -1,4 +1,6 @@
 <template>
+<div>
+  <Navigation/>
   <div class="about">
     <h1>This is an about page</h1>
     <div v-for="dataGheets in gsheets" :key="dataGheets.length">
@@ -8,10 +10,12 @@
             <p>{{dataGheets[3]}}</p>
         </div>
   </div>
+</div>
 </template>
 
 <script>
 import gsheetDataServices from '../services/gsheetDataServices';
+import Navigation from '@/components/Navigation.vue';
 
 export default {
   name: 'About',
@@ -29,8 +33,12 @@ export default {
         this.gsheets = null;
       } else {
         this.gsheets = response.data.values;
+        console.log(this.gsheets, "values gsheets");
       }
     })
+  },
+  components: {
+    Navigation
   }
 }
 </script>
