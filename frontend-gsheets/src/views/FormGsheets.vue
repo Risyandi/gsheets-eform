@@ -1,5 +1,7 @@
 <template>
-  <div class="form-wrap">
+<div>
+  <Navigation/>
+  <div class="form-gsheets">
     <h2>Gsheets Register Data</h2>
     <form v-on:submit.prevent="submitForm">
       <div class="form-group">
@@ -35,10 +37,13 @@
       </div>
     </form>
   </div>
+</div>
 </template>
 
 <script>
   import gsheetDataServices from '../services/gsheetDataServices';
+  import Navigation from '@/components/Navigation.vue';
+
   export default {
     name: 'FormGsheets',
     data(){
@@ -72,12 +77,15 @@
           }
         })
       }
+    },
+    components: {
+      Navigation
     }
   }
 </script>
 
 <style scoped>
-  .form-wrap {
+  .form-gsheets {
         max-width: 960px;
         margin: 0 auto;
     }
