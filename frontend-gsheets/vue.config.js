@@ -4,6 +4,5 @@ module.exports = {
         port: 3000
     },
     productionSourceMap: false,
-    outputDir: '../dist',
-    assetsDir: 'static',
+    assetsDir: 'assets',
 }
