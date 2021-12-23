@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper" id="media-website">
+    <div class="card-media" id="media-website">
         <div v-for="dataMedia in mediaWebsite" :key="dataMedia.name" v-bind:class="dataMedia.bg_dark !== true ? 'card' : 'card bg-dark'">
             <p>{{dataMedia.name}}</p>
             <p><a :href="dataMedia.link" target="_blank"> {{dataMedia.link}}</a></p>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-    .wrapper {
+    .card-media {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 1rem;

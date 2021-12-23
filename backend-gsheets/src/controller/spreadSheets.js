@@ -49,12 +49,14 @@ exports.create = async (req, res) => {
 
 exports.delete = async (req, res) => {
     try {
+        const id = req.params.id;
+        const rangeId = `Sheet1!A${id}:D${id}`;
         const auth = getAuth();
         const googleSheets = await getGoogleSheet(auth);
         const getSheetData = await googleSheets.spreadsheets.values.clear({
             auth,
             spreadsheetId,
-            range: 'Sheet1!A5:D5',
+            range: rangeId,
         });
         res.send({
             message: "delete successfully",

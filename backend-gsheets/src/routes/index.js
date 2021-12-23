@@ -25,7 +25,7 @@ module.exports = function routes(app) {
   // all route
   router.get('/spreadsheet', spreadSheets.find);
   router.post('/spreadsheet', spreadSheets.create);
-  router.post('/spreadsheet/delete', spreadSheets.delete);
+  router.post('/spreadsheet/delete/:id', spreadSheets.delete);
   router.put('/spreadsheet', spreadSheets.update);
 
 };

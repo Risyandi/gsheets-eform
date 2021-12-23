@@ -1,5 +1,5 @@
 <template>
-    <div id="nav">
+    <div class="navigation" id="nav">
       <router-link to="/" exact>Home</router-link> |
       <router-link to="/about" exact>About</router-link> |  
       <router-link to="/web" exact>Website</router-link> | 
