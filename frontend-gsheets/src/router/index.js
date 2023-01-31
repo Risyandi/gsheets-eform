@@ -17,14 +17,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
+    path: '/list-form',
+    name: 'List Form',
+    component: () => import('../views/ListForm.vue'),
     // children path
     children: [
       {
-        path : 'about-child',
-        component: () => import('../views/About.vue')
+        path : 'list-form-child',
+        component: () => import('../views/ListForm.vue')
       }
     ]
   },
