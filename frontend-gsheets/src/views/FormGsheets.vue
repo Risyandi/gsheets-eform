@@ -7,28 +7,28 @@
       <div class="form-group">
         <label for="nomor">Nomor</label>
         <input type="text" class="form-control" id="nomor" v-model="form.nomor" placeholder="Enter your nomor">
-        <span>
+        <span class="require-text">
           {{form.nomor.length > 0 ? '' : 'Nomor is required'}}
         </span>
       </div>
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" v-model="form.name" placeholder="Enter your name">
-        <span>
+        <span class="require-text">
           {{form.name.length > 0 ? '' : 'Name is required'}}
         </span>
       </div>
       <div class="form-group">
         <label for="alamat">Alamat</label>
         <input type="text" class="form-control" id="alamat" v-model="form.alamat" placeholder="Enter your alamat">
-        <span>
+        <span class="require-text">
           {{form.alamat.length > 0 ? '' : 'Alamat is required'}}
         </span>
       </div>
       <div class="form-group">
         <label for="handphone">Nomor Handphone</label>
         <input type="number" class="form-control" id="handphone" v-model="form.handphone" placeholder="Enter your nomor handphone">
-        <span>
+        <span class="require-text">
           {{form.handphone.length > 0 ? '' : 'Nomor handphone is required'}}
         </span>
       </div>
@@ -98,7 +98,7 @@
     text-align: left;
   }
   .form-group span {
-    color: #42b983;
+    color: red;
   }
   .form-group input,
   .form-group textarea  {
