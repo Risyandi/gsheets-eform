@@ -1,9 +1,9 @@
 <template>
 <div>
   <Navigation/>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <div v-for="dataGheets in gsheets" :key="dataGheets.length">
+  <div class="list-form">
+    <h1>List Data Form</h1>
+    <div v-for="dataGheets in gsheets.slice(1)" :key="dataGheets.length">
             <p>{{dataGheets[0]}}</p>
             <p>{{dataGheets[1]}}</p>
             <p>{{dataGheets[2]}}</p>
@@ -18,7 +18,7 @@ import gsheetDataServices from '../services/gsheetDataServices';
 import Navigation from '@/components/Navigation.vue';
 
 export default {
-  name: 'About',
+  name: 'ListForm',
   data() {
       return {
         gsheets : null 
