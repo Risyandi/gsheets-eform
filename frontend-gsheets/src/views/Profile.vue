@@ -216,7 +216,7 @@
 
 <script>
     export default {
-        name: 'profile',
+        name: 'Profile',
         data () {
             return {
                 publicPath: 'http://localhost:3000/',
