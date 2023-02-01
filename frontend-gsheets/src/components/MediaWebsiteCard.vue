@@ -11,6 +11,7 @@
 <script>
 import Data from '../static/dataMediawebsite.json'
 export default {
+    name: 'MediaCard',
     data() {
         return {
             mediaWebsite: null

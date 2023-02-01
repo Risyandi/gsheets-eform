@@ -297,6 +297,10 @@
   .lightbox .modal-dialog {
     width: 960px;
   }
+  .card-list {
+    margin: 10px 10px 10px 10px;
+    width: 25%;
+  }
 }
 
 @media (max-width: 991px) {
